@@ -1,0 +1,150 @@
+
+
+.w-content{
+    background-color:#f6f6f6 ;
+    margin-bottom: 30px;
+}
+
+.bread{
+    height: 34px;
+    background-color: #000;
+    font-size: 16px;
+    line-height: 34px;
+    color: #fff;
+    padding-left: 18px;
+    margin: 32px 0;
+}
+.options{
+    overflow: hidden;
+}
+.options> div{
+    border: 1px solid #ddd;
+}
+ .ld, .rd, .w-items{
+     position: relative;
+     background-color: #fff;
+ }
+.options .ld{
+    width: 854px;
+    height: auto;
+    margin-right: 18px;
+    padding: 25px 18px;
+    overflow: hidden;
+    /*height: 170px;*/
+
+}
+.options .rd{
+    width: 248px;
+    height: 180px;
+}
+.w-items{
+    width: 854px;
+    border: 1px solid #ddd;
+    margin-top: 32px;
+    background-color: #fff;
+}
+.op{
+    padding: 20px 0;
+    font-size: 16px;
+}
+.op a.all{
+    padding: 0 34px;
+    color: #ef0f0f;
+}
+.op span{
+    font-weight: bold;
+}
+.op a{
+    padding: 0 12px;
+    color: #000;
+}
+
+.release-work{
+    /*overflow: hidden;*/
+    display: block;
+    line-height: 33px;
+    text-align: center;
+    width: 86px;
+    height: 33px;
+    position: absolute;
+    color: #EF0F0F;
+    font-size: 16px;
+    border: 1px solid #EF0F0F;
+    right: 80px;
+    bottom: 42px;
+    border-radius:5px ;
+}
+.options .rd{
+    padding: 20px;
+    font-size: 16px;
+    line-height: 30px;
+}
+.line-dashed{
+    border-bottom: 1px dashed #e4e4e4;
+}
+.rd h4{
+    color: #737272;
+}
+.rd>div{
+    text-align: center;
+    padding: 8px 0;
+}
+
+
+.w-items {
+    padding: 0 18px;
+}
+
+.w-items .w-title{
+    position: relative;
+    width: 154px;
+    line-height: 27px;
+    padding: 10px 5px;
+    color: #EF0F0F;
+    border:1px solid #ef0f0f;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 18px;
+
+}
+.w-items .w-item:last-child{
+    border: none;
+}
+.w-items>span{
+    display: inline-block;
+    width: 75px;
+    margin-right: 0;
+    text-align: right;
+}
+.w-items  .w-user{
+    margin:32px 0;
+    color: #807f81;
+}
+.w-items  .w-item{
+    border-bottom: 1px dashed #ccc;
+    margin-top: 24px;
+}
+.w-items .w-date{
+    margin: 30px 0;
+    color: #807f81;
+}
+.d-icon{
+    background: url("../images/icons/date.png") no-repeat 0 -8px;
+    padding:1px 18px;
+    background-size: 7%;
+    width: 260px;
+}
+.m-icon{
+    background: url("../images/icons/money.png") no-repeat 0 1px ;
+    padding:1px 18px;
+    background-size: 8%;
+}
+.w-user div:nth-child(1){
+    font-size: 20px;font-weight: bold;width:300px;color: #000;
+}
+.w-user div:nth-child(2){
+    background: #b7bdfd;border-radius: 5px;padding: 2px 5px;color: #fff
+}
+.w-user div:nth-child(3),w-date div:nth-child(3){
+    margin-right: 20px;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录/注册</title>
+    <link rel="stylesheet" href="../css/login_register.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+</head>
+<body>
+    <header class="wrap head">
+        <h1 class="logo left">logo<a href=""><img src="" alt=""></a></h1>
+        <div class="right contact">
+            <div>029-8322-3592</div>
+            <div>客服时间 9:00-18：00</div>
+        </div>
+    </header>
+    <div class="lr">
+        <div class="wrap">
+            <div class="form">
+                <h3 id="lr"><span class="active" id="login">登录</span><span id="register">注册</span></h3>
+                <div  class="error-message"></div>
+                <form class="login-form">
+                    <div class="input-group">
+                        <input class="username" type="text" placeholder="用户名/手机号/邮箱">
+                    </div>
+                    <div class="input-group">
+                        <input class="password" type="password" placeholder="密码">
+                    </div>
+                    <div class="input-group auto-login">
+                        <input type="checkbox">自动登录
+                        <a href="javascript:void (0)" class="forget" href="">忘记密码</a>
+                    </div>
+                    <div class="btn-lr">
+                        <a class="login" href="javascript:void(0)">安全登录</a>
+                    </div>
+                </form>
+                <form class="register-form hide">
+                    <div class="input-group">
+                        <input class="username" type="text" placeholder="用户名">
+                    </div>
+                    <div class="input-group">
+                        <input class="password" type="password" placeholder="密码">
+                    </div>
+                    <div class="input-group">
+                        <input class="password" type="password" placeholder="确认密码">
+                    </div>
+                    <div class="input-group">
+                        <input class="username" type="text" placeholder="手机号">
+                    </div>
+                    <div class="input-group relative">
+                        <input class="code" type="text" placeholder="图片验证码">
+                        <a href="javascript:void (0)" id="freshCode" class="code-img" src="" alt="">
+                            <canvas width="80" height="30" id="c1">
+                            </canvas>
+                        </a>
+                    </div>
+                    <div class="input-group">
+                        <input class="code" type="text" placeholder="短信验证码">
+                        <span class="code-text"> <a href="">获取验证码</a></span>
+                    </div>
+                    <div class="input-group agree-area">
+                        <input class="agree" type="checkbox">
+                        <a href="">我已阅读并接受<span>《CE众包网协议》</span></a>
+                    </div>
+                    <div class="btn-lr">
+                        <a class="register" href="javascript:void(0)">同意协议并注册</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="footer" id="footer">
+        <div class="wrap ">
+            <h4>友情链接 | 合作伙伴 | 公司信息 | 备案信息</h4>
+            <h4>陕ICP15033465号  ICP证：陕B2-20180827</h4>
+            <img src="../images/footer.png" alt="">
+        </div>
+    </footer>
+
+<!--js-->
+ <script src="../js/lr.js"></script>
+</body>
+</html>
