@@ -64,7 +64,15 @@ body{
     width: 461px;
     height: 80px;
 }
-
+.bread{
+    height: 34px;
+    background-color: #000;
+    font-size: 16px;
+    line-height: 34px;
+    color: #fff;
+    padding-left: 18px;
+    margin: 32px 0;
+}
 
 .tabs li{
     float: left;

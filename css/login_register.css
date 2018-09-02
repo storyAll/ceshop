@@ -5,6 +5,7 @@
     height: 60px;
 }
 .logo{
+    margin-left: 50px;
 
 }
 .relative{
@@ -103,7 +104,7 @@
 }
 .form .register-form input{
     width: 240px;
-    padding: 10px;
+    padding: 5px 10px;
 }
 .form .register-form .input-group .code{
     width: 150px;
