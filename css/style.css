@@ -29,6 +29,10 @@ body{
 .hide{
     display: none;
 }
+.cover:hover{
+    cursor: pointer;
+}
+
 
 /*顶部菜单*/
 .top-nav{
@@ -130,7 +134,7 @@ body{
     margin-top: 50px;
 }
 .kf{
-    width: 150px;
+    width: 180px;
     font-size: 18px;
     font-weight: normal;
     padding-left: 30px;

@@ -107,7 +107,7 @@
     padding: 5px 10px;
 }
 .form .register-form .input-group .code{
-    width: 150px;
+    width: 140px;
 }
 .form .register-form .input-group .agree{
     position: relative;
@@ -117,14 +117,12 @@
 }
 .form .register-form .code-text{
     display: inline-block;
-    padding-left:15px;
+    padding-left:0px;
     text-align: center;
 }
 .form .register-form .code-img{
     position: absolute;
     display: inline-block;
-    width: 80px;
-    height: 30px;
     right: 1px;
 }
 .form .register-form .agree-area a{

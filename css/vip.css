@@ -9,6 +9,7 @@
 .sl{
     width: 900px;
     margin-right: 20px;
+    margin-bottom: 50px;
 }
 
 .sr{
@@ -63,6 +64,48 @@
 }
 
 .vip-detail{
-    border: 1px solid #f6f6f6;
-    height: 600px;
+    border: 1px solid #DDD;
+    overflow: hidden;
+    padding: 10px;
+    padding-bottom: 45px;
+}
+.miss-login{
+    border: 1px solid #DDD;
+    padding: 43px 0;
+}
+.miss-login>h4,.miss-login>div{
+
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+table{
+    width: 620px;
+    border: 1px solid #ddd;border-collapse: collapse;
+
+}
+td{
+    text-align: center;
+    color: #333;
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    background-color: #fff;
+    line-height: 40px;
+    /*text-align: left;*/
+}
+.pass-root{
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    line-height: 40px;
+    border-radius: 5px;
+    width: 185px ;
+    height: 40px;
+    background-color: #ef0f0f;
+    display: block;
+    margin: 50px auto
+}
+.icon-free{
+    margin: 0 50px; position: relative;top:7px;
+    display:inline-block; width: 24px;height: 24px; background: url('../images/free.png') no-repeat
 }
