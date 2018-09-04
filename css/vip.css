@@ -42,26 +42,14 @@
 }
 .cards ul{
     position: relative;
-    height: 200px;
+    height: 180px;
     /*overflow: hidden;*/
 }
 .cards li{
     position: absolute;
-    width: 135px;
+    width: 137px;
     height: 177px;
     float: left;
-    /*border:1px solid red;*/
-    margin-right: 10px;
-
-}
-.cards li:hover{
-    position: absolute;
-    margin-left: -25px;
-    margin-top:-15px;
-    width: 175px;
-    height: 220px;
-    background: url("../images/tb_big.png") no-repeat;
-    z-index: 999;
 }
 .cards1 li{
     background: url("../images/vip.png") no-repeat;
@@ -76,26 +64,35 @@
    background-position: 0 1px;
     left: 15px;
 }
+.cards1 li.hover{
+    position: absolute;
+    background: url("../images/tb_big.png") no-repeat;
+    margin-left: -18px;
+    margin-top:-15px;
+    width: 175px;
+    height: 220px;
+    z-index: 999;
+}
 .cards1 li:nth-child(2){
-    background-position: -147px 1px;
-    left: 160px;
+    /*background-position: -155px 1px;*/
+    left: 162px;
 }
 .cards1 li:nth-child(3){
-    background-position: -295px 1px;
-    left: 305px;
+    /*background-position: -302px 1px;*/
+    left: 309px;
 }
 .cards1 li:nth-child(4){
-    background-position: -441px 1px;
-    left: 450px;
+    /*background-position: -450px 1px;*/
+    left: 456px;
 }
 .cards1 li:nth-child(5){
-    background-position: -589px 1px;
-    left: 595px;
+    /*background-position: -596px 1px;*/
+    left: 603px;
 }
 .cards1 li:last-child{
     margin-right: 0;
-    background-position: -589px 1px;
-    left: 740px;
+    /*background-position: -745px 1px;*/
+    left: 750px;
 }
 .wz{
     height: 48px;
@@ -108,12 +105,41 @@
     bottom: -2px;
     width: 100%;
 }
+.wz-hover{
+    height: 48px;
+    padding: 5px 0;
+    color: #fff;
+    text-align: center;
+    line-height: 20px;
+    font-size: 16px;
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+}
 
 .vip-detail{
     border: 1px solid #DDD;
     overflow: hidden;
     padding: 10px;
     padding-bottom: 45px;
+}
+.vip-detail .h4{
+    font-size: 18px;
+    margin: 30px 0 20px 0
+}
+.vip-detail .h4>span{
+    color: #ef0f0f
+}
+.vip-detail .detail-body{
+    position: relative;
+    padding: 20px 60px
+}
+.vip-detail .detail-body p{
+    position: relative;
+    left: 40px;
+    top:-17px;
+    padding-right: 50px;
+    line-height: 20px
 }
 .miss-login{
     border: 1px solid #DDD;
@@ -138,6 +164,10 @@ td{
     background-color: #fff;
     line-height: 40px;
     /*text-align: left;*/
+}
+.td-style{
+    text-align: left;
+    padding-left: 10px
 }
 .pass-root{
     text-align: center;
