@@ -14,6 +14,8 @@ $(function () {
     var msg_code=""
     var time=30;
     var person=0;
+    const uPattern = /^[a-zA-Z0-9_-]{6,16}$/;
+    const mPattern = /^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\d{8}$/;
     lr.bind("click", function (e) {
         $("#msg_login").text("")
         $("#msg_register").text("")
@@ -38,7 +40,7 @@ $(function () {
         flag='false'
         cnvCode(flag)
     })
-//绘制随机验证码
+    //绘制随机验证码
     async function cnvCode(flag) {
         var f=hex_md5(flag)
         // 验证码获取
@@ -115,8 +117,8 @@ $(function () {
     var lg = $("#lg")
     $("#username").blur(function () {
         $("#msg_login").text("")
-        if ($("#username").val() == "") {
-            $("#msg_login").text("账户名不能为空")
+        if(!uPattern.test($("#username").val())){
+            $("#msg_login").text("账户6-16位数字字母或_-")
         }else{
             $.ajax(
                 {
@@ -137,8 +139,8 @@ $(function () {
     })
     $("#password").blur(function () {
         $("#msg_login").text("")
-        if ($("#password").val() == "") {
-            $("#msg_login").text("密码不能为空")
+        if(!uPattern.test($("#password").val())){
+            $("#msg_login").text("密码6-16位数字字母或_-")
         }else{
             $.ajax(
                 {
@@ -162,8 +164,8 @@ $(function () {
 
 
     lg.bind('click', function () {
-        if ($("#username").val() == "" || $("#password").val() == "") {
-            $("#msg_login").text("账号或密码不能为空")
+        if ($("#username").val() == "" || $("#password").val() == "" || !uPattern.test($("#password").val()) || !uPattern.test($("#username").val())) {
+            $("#msg_login").text("账号或密码不正确")
             return
         }
         $.ajax(
@@ -173,8 +175,11 @@ $(function () {
                 dataType: 'jsonp',
                 jsonpCallback: "callback",
                 success: function (data) {
-                    console.log(data[0].message)
-                    $("#msg_login").text(data[0].message)
+                    if (data[0].value=="true") {
+                        $(location).attr('href', '../index.html');
+                    }else{
+                        $("#msg_login").text("登录失败请重新登录")
+                    }
                 },
                 error: function (error) {
                     console.log(error)
@@ -191,8 +196,8 @@ $(function () {
     //预加密接口
     //用户名加密
     $("#register_user").blur(function () {
-        if($("#register_user").val()==""){
-            $("#msg_register").text("账户名不能为空")
+        if(!uPattern.test($("#register_user").val())){
+            $("#msg_register").text("请输入6-12位用户名数字字母或_-")
             return
         }
         if($("#register_user").val()!=""){
@@ -214,6 +219,11 @@ $(function () {
                     }
                 }
             );
+        }
+    })
+    $("#register_ps").blur(function () {
+        if (!uPattern.test($("#register_ps").val())) {
+            $("#msg_register").text("请输入6-12位密码数字字母或_-")
         }
     })
     //密码加密
@@ -251,8 +261,8 @@ $(function () {
     //手机号查询
     $("#cellphone").blur(function () {
         var cellphone=$("#cellphone").val()
-        if (cellphone=="") {
-            $("#msg_register").text("手机号不能为空")
+        if (!mPattern.test(cellphone)) {
+            $("#msg_register").text("请输入正确的手机号码")
             return
         }
         $.ajax(
@@ -325,7 +335,7 @@ $(function () {
                 }
             );
     })
-
+    //手机验证码
     $("#msg_code").blur(function () {
         if ($("#msg_code").val() != msg_code) {
             $("#msg_register").text("短信验证码不正确")
@@ -335,14 +345,13 @@ $(function () {
     })
 
     $("#sign_up").bind('click',function(){
-        if($("#register_user").val()=="" ||
-            $("#register_ps").val()=="" ||
-            $("#repeat_ps").val()=="" ||
+        if( !uPattern.test($("#register_user").val())||
+            !uPattern.test($("#register_ps").val()) ||
+            !uPattern.test($("#repeat_ps").val()) ||
             $("#msg_code").val() =="" ||
             $("#img_code").val() =="" ||
             $("#cellphone").val() =="" ||
             !$("#agree").is(":checked")){
-
                 $("#msg_register").text("请补全注册信息")
                 return
 
@@ -356,7 +365,11 @@ $(function () {
                 dataType: 'jsonp',
                 jsonpCallback: "callback",
                 success: function (data) {
-                    console.log(data[0].value)
+                   if(data[0].value =="true"){
+                       $("#msg_register").text("注册成功请登录")
+                   }else{
+                       $("#msg_register").text("注册失败请重新注册")
+                   }
 
                 },
                 error: function (error) {
