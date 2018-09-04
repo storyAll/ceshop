@@ -52,7 +52,7 @@
     float: left;
 }
 .cards1 li{
-    background: url("../images/vip.png") no-repeat;
+    /*background: url("../images/vip.png") no-repeat;*/
 }
 .cards2 li{
     background: url("../images/tb.png") no-repeat;
@@ -61,17 +61,19 @@
     background: url("../images/zd.png") no-repeat;
 }
 .cards1 li:first-child{
-   background-position: 0 1px;
     left: 15px;
 }
 .cards1 li.hover{
-    position: absolute;
-    background: url("../images/tb_big.png") no-repeat;
-    margin-left: -18px;
-    margin-top:-15px;
-    width: 175px;
-    height: 220px;
-    z-index: 999;
+    animation:mymove 1s linear;
+    -webkit-transform:scale(1.1);
+}
+@keyframes mymove {
+    0% {
+        -webkit-transform:scale(1);
+    }
+    100% {
+        -webkit-transform:scale(1.1);
+    }
 }
 .cards1 li:nth-child(2){
     /*background-position: -155px 1px;*/
@@ -113,9 +115,10 @@
     line-height: 20px;
     font-size: 16px;
     position: absolute;
-    bottom: 15px;
+    bottom: 0px;
     width: 100%;
 }
+
 
 .vip-detail{
     border: 1px solid #DDD;
