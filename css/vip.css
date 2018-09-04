@@ -9,57 +9,103 @@
 .sl{
     width: 900px;
     margin-right: 20px;
-    margin-bottom: 50px;
+    /*margin-bottom: 50px;*/
 }
 
 .sr{
     width: 280px;
+    padding-top: 15px;
+}
+.tabs-cards{
+    position: relative;
+    top: 12px;
+    padding: 0 13px;
+    margin-top: -20px;
+
+}
+.tabs-cards li{
+    color: #0a0a0a;
+    font-size: 16px;
+    text-align: center;
+    float: left;
+    padding: 5px 0;
+    margin-right: 20px ;
+}
+.tabs-cards li:hover{
+    cursor: pointer;
+}
+.tabs-cards li.active{
+    border-bottom: 5px solid #EF0F0F;
 }
 .cards{
     margin: 30px 0;
 }
 .cards ul{
-    padding-left: 9px;
-    overflow: hidden;
+    position: relative;
+    height: 200px;
+    /*overflow: hidden;*/
 }
 .cards li{
-    position: relative;
+    position: absolute;
     width: 135px;
-    height: 176px;
+    height: 177px;
     float: left;
     /*border:1px solid red;*/
-    margin-right: 14px;
+    margin-right: 10px;
+
 }
-.cards li:last-child{
+.cards li:hover{
+    position: absolute;
+    margin-left: -25px;
+    margin-top:-15px;
+    width: 175px;
+    height: 220px;
+    background: url("../images/tb_big.png") no-repeat;
+    z-index: 999;
+}
+.cards1 li{
+    background: url("../images/vip.png") no-repeat;
+}
+.cards2 li{
+    background: url("../images/tb.png") no-repeat;
+}
+.cards3 li{
+    background: url("../images/zd.png") no-repeat;
+}
+.cards1 li:first-child{
+   background-position: 0 1px;
+    left: 15px;
+}
+.cards1 li:nth-child(2){
+    background-position: -147px 1px;
+    left: 160px;
+}
+.cards1 li:nth-child(3){
+    background-position: -295px 1px;
+    left: 305px;
+}
+.cards1 li:nth-child(4){
+    background-position: -441px 1px;
+    left: 450px;
+}
+.cards1 li:nth-child(5){
+    background-position: -589px 1px;
+    left: 595px;
+}
+.cards1 li:last-child{
     margin-right: 0;
-}
-.tb{
-    height: 133px;
-    border-radius: 5px;
-    padding: 32px 0;
-    border: 1px solid #ddd;
-    background-color: #fff;
-
-
-}
-.tb i{
-    margin:  auto;
-    display: block;
-    height: 64px;
-    width: 64px;
-    background: url("../images/ico_main.png") no-repeat ;
+    background-position: -589px 1px;
+    left: 740px;
 }
 .wz{
     height: 48px;
     padding: 5px 0;
-    background-color: #ef0f0f;
     color: #fff;
     text-align: center;
-    line-height: 22px;
+    line-height: 20px;
     font-size: 14px;
     position: absolute;
-    z-index: -1;
-    bottom: 0;
+    bottom: -2px;
     width: 100%;
 }
 
