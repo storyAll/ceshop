@@ -373,6 +373,7 @@ $(function () {
                        $("#msg_register").text("注册失败请重新注册")
                    }
 
+
                 },
                 error: function (error) {
                     console.log(error)
