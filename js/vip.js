@@ -62,6 +62,7 @@ $(function () {
         }
         $(".cards1 ul li").eq(0).addClass("hover").siblings().removeClass("hover")
         renderDetail(statuscode)
+
     }
 
     function renderDetail(code) {
