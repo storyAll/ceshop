@@ -60,12 +60,14 @@
 .cards3 li{
     background: url("../images/zd.png") no-repeat;
 }
-.cards1 li:first-child{
-    left: 15px;
-}
+
 .cards1 li.hover{
+    cursor: pointer;
     animation:mymove .1s linear;
     -webkit-transform:scale(1.1);
+    box-shadow: 1px 5px 15px rgba(102,102,102,.5);
+    width: 135px;
+
 }
 @keyframes mymove {
     0% {
@@ -73,7 +75,12 @@
     }
     100% {
         -webkit-transform:scale(1.1);
+
+
     }
+}
+.cards1 li:nth-child(1){
+    left: 15px;
 }
 .cards1 li:nth-child(2){
     /*background-position: -155px 1px;*/
@@ -91,7 +98,7 @@
     /*background-position: -596px 1px;*/
     left: 603px;
 }
-.cards1 li:last-child{
+.cards1 li:nth-child(6){
     margin-right: 0;
     /*background-position: -745px 1px;*/
     left: 750px;
@@ -204,4 +211,13 @@ td{
 .icon-free{
     margin: 0 50px; position: relative;top:7px;
     display:inline-block; width: 24px;height: 24px; background: url('../images/free.png') no-repeat
+}
+.pay-detail{
+    background-color: #f1f1f1;
+    margin: 0 50px;
+    padding: 15px 50px;
+    overflow: hidden;
+}
+.total-pay{
+    /*width: 150px;*/
 }

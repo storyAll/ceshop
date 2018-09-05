@@ -177,13 +177,13 @@
                 </div>
             </div>
             <div class="vip-detail">
-                <div class="vd">
+                <div class="vd" style="height: 150px">
 
                 </div>
                 <div><img src="../images/line_0.png" alt=""></div>
 
-                <h4 class="h4">开通详情</h4>
-                    <table  style="margin: 30px auto">
+                <h4 class="h4">购买详情</h4>
+                    <table  style="margin: 30px auto;display: none">
                         <tr style="height: 40px;font-size: 16px">
                             <td colspan="3" class="td-style">购买期限</td>
                         </tr>
@@ -206,8 +206,11 @@
                             <td colspan="3" style="line-height: 60px">皇冠版(一年)：<span style="color: #ef0f0f">2000元</span>+任务速配手机短信通知（一年）：<span style="color: #ef0f0f">0元</span></td>
                         </tr>
                     </table>
-                <div style="text-align: right;padding-right: 130px">总付款：<span style="color: #ef0f0f">6000元</span></div>
-                <a id="pay" class="pass-root" href="">立即开通</a>
+                <div style="text-align: right;padding-right: 130px;display: none">总付款：<span style="color: #ef0f0f">6000元</span></div>
+                <div class="pay-detail">
+                    <div class="left">已选择：<span style="color:#EF0F0F" id="price"></span></div><div class="total-pay right">总付款：<span id="totalMoney" style="color: #ef0f0f">6000元</span></div>
+                </div>
+                <a id="pay" class="pass-root" href="javascript:void 0">立即支付</a>
 
             </div>
         </div>

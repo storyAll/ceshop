@@ -128,6 +128,7 @@ $(function () {
                     jsonpCallback: "callback",
                     success: function (data) {
                         login_user_tk=data[0].value
+
                         console.log(login_user_tk)
                     },
                     error: function (error) {
@@ -176,6 +177,7 @@ $(function () {
                 jsonpCallback: "callback",
                 success: function (data) {
                     if (data[0].value=="true") {
+
                         $(location).attr('href', '../index.html');
                     }else{
                         $("#msg_login").text("登录失败请重新登录")
@@ -380,6 +382,10 @@ $(function () {
 
     })
 
-
+    function setCookie(name,value,days){    //封装一个设置cookie的函数
+        var oDate=new Date();
+        oDate.setDate(oDate.getDate()+days);   //days为保存时间长度
+        document.cookie=name+'='+value+';expires='+oDate;
+    }
 
 })
