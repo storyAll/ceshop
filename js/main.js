@@ -53,6 +53,7 @@ $.ajax(
 $(".child-menu").on("mouseover","li",function () {
     let key=$(this).attr("key")
     let menuList=menuData[key].second
+        $(".pad-l").html("")
     if($(".pad-l").children().length<=0){
         for (let i in menuList) {
             $(".pad-l").append(`<div class="pl-item left">
@@ -67,14 +68,13 @@ $(".child-menu").on("mouseover","li",function () {
     }
     $(".children-menu").show()
 })
-// menu_item.on("mouseout",function () {
-//     $(".children-menu").mouseout(function () {
-//         $(".children-menu").hide()
-//     })
-// })
+console.log($(".child-menu,.children-menu"))
+$("#uu").bind("mouseleave",function (e) {
+             $(".children-menu").hide()
+})
 // menu_item.on("mouseout","li",function () {
-//     $(".pad-l").html("")
-//     $(".children-menu").hide()
+//     // $(".pad-l").html("")
+//     // $(".children-menu").hide()
 // })
 // $(".children-menu").on("mouseover",function () {
 //     $(".children-menu").show()
