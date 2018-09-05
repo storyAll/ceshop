@@ -64,7 +64,7 @@
     left: 15px;
 }
 .cards1 li.hover{
-    animation:mymove 1s linear;
+    animation:mymove .1s linear;
     -webkit-transform:scale(1.1);
 }
 @keyframes mymove {
@@ -146,13 +146,30 @@
 }
 .miss-login{
     border: 1px solid #DDD;
-    padding: 43px 0;
+    padding: 20px 0;
+}
+.miss-login input{
+    border-radius: 5px;
+    padding: 5px;
+    outline: none;
+    border: 1px solid #aaa;
 }
 .miss-login>h4,.miss-login>div{
-
     width: 100%;
     padding: 10px;
     text-align: center;
+}
+.miss-login>h4{
+    margin-bottom: 20px;
+}
+.miss-login button{
+    background-color: #c1c1c1;
+    border:1px solid #aaa;
+    border-radius: 5px;
+    padding: 3px 40px;
+    color: #f1f1f1;
+    cursor: pointer;
+    outline: none;
 }
 table{
     width: 620px;
