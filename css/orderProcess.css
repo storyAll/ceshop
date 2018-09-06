@@ -59,6 +59,11 @@
     padding: 0;
 
 }
+#rd>div:nth-child(1),#rd>div:nth-child(2){
+    float: left;
+    height: 110px;
+    width: 130px;
+}
  .mark{
     position: relative;
     top: 2px;

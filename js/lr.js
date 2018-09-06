@@ -163,22 +163,32 @@ $(function () {
         }
     })
 
-
+    if (getCookie("ce_username")!=null){
+        $("#username").val(getCookie("ce_username"))
+        $("#password").val(getCookie("ce_password"))
+        $("#remeber").prop("checked","checked")
+    }
     lg.bind('click', function () {
         if ($("#username").val() == "" || $("#password").val() == "" || !uPattern.test($("#password").val()) || !uPattern.test($("#username").val())) {
             $("#msg_login").text("账号或密码不正确")
             return
+        }
+        if($("#remeber").prop("checked")){
+            setCookie("ce_username",$("#username").val())
+            setCookie("ce_password",$("#password").val())
+        }else{
+            delCookie("ce_username")
+            delCookie("ce_password")
         }
         $.ajax(
             {
                 type: 'get',
                 url: 'http://192.168.0.115:8080/ycweb/user/login.do?userName=' + login_user_tk + '&password=' + login_ps_tk,
                 dataType: 'jsonp',
-                jsonpCallback: "callback",
+                jsonpCallback: "login_callback",
                 success: function (data) {
                     if (data[0].value=="true") {
-
-                        $(location).attr('href', '../index.html');
+                        window.location.href="./index.html"
                     }else{
                         $("#msg_login").text("登录失败请重新登录")
                     }

@@ -1,3 +1,4 @@
+
 $(function () {
 //选项卡切换样式
     var tabs = $("#tabs_cards li");
@@ -28,13 +29,26 @@ $(function () {
                 url: `http://192.168.0.115:8080/ycweb/product/find_All_product.do`,
                 dataType: 'jsonp',
                 jsonpCallback: "callback",
-                success: renderProduct,
+                success: function (data) {
+                    product_list = data
+                    for (let i = 0; i < product_list.length; i++) {
+                        $(".cards1 ul").append(`<li style="background: url('${product_list[i].ce_product_icon}')  no-repeat ;">
+                            <div class="wz" >
+                                <div>${product_list[i].ce_productName}</div>
+                                <div>${product_list[i].ce_product_now_price}/年</div>
+                            </div>
+                        </li>`)
+                    }
+                    $(".cards1 ul li").eq(0).addClass("hover").siblings().removeClass("hover")
+                    renderDetail(statuscode)
+                },
                 error: function (error) {
                     console.log(error)
                 }
             }
         );
     }
+
     //生成订单号
     function pad2(n) { return n < 10 ? '0' + n : n }
     function pad3(n) {
@@ -58,9 +72,12 @@ $(function () {
     }
     /*立即支付*/
     $("#pay").click(function () {
+        if (getCookie("ce_username")==null) {
+            alert("请先登录")
+        }
         let orderId_time_stamp=generateTimeReqestNumber()
         let order_name=product_list[statuscode].ce_productName
-        let buyer="admin123"
+        let buyer=getCookie("ce_username")?getCookie("ce_username"):''
         let order_money=product_list[statuscode].ce_product_now_price
         let order_token=product_list[statuscode].ce_product_token
         console.log(order_token)
@@ -75,23 +92,16 @@ $(function () {
                 },
                 error: function (error) {
                     console.log(error)
+                },
+                callback:function () {
+
                 }
             }
         );
     })
 
     function renderProduct(list) {
-        product_list = list
-        for (let i = 0; i < list.length; i++) {
-            $(".cards1 ul").append(`<li style="background: url('${product_list[i].ce_product_icon}')  no-repeat ;">
-                            <div class="wz" >
-                                <div>${product_list[i].ce_productName}</div>
-                                <div>${product_list[i].ce_product_now_price}/年</div>
-                            </div>
-                        </li>`)
-        }
-        $(".cards1 ul li").eq(0).addClass("hover").siblings().removeClass("hover")
-        renderDetail(statuscode)
+
 
     }
 
@@ -107,3 +117,4 @@ $(function () {
         $("#totalMoney").text(`${product_list[code].ce_product_now_price}/年`)
     }
 })
+
