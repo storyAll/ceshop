@@ -11,6 +11,18 @@
 .options> div{
     border: 1px solid #ddd;
 }
+.z ,.y{
+    float: left;
+    height: 100px;
+    background-color: green;
+}
+.z{
+    width: 330px;
+    margin-right: 20px;
+}
+.y{
+    width: 850px
+}
  .ld, .rd, .w-items{
      position: relative;
      background-color: #fff;
@@ -110,8 +122,21 @@
     padding: 0 18px;
 }
 .w-items .w-title{
+    /*display: inline-block;
     position: relative;
-    width: 154px;
+    width: auto;
+    line-height: 27px;
+    padding: 10px 5px;
+    color: #EF0F0F;
+    border:1px solid #ef0f0f;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 18px;*/
+}
+.w-items .w-title span:first-child{
+     display: inline-block;
+    position: relative;
+    width: auto;
     line-height: 27px;
     padding: 10px 5px;
     color: #EF0F0F;
@@ -119,7 +144,13 @@
     padding: 5px;
     border-radius: 5px;
     font-size: 18px;
-
+}
+.w-items .w-title span:last-child{
+    float: right;
+    line-height: 30px;
+    display: inline-block;
+    background-color: #e4e4e4;
+    padding: 0px 10px;
 }
 .w-items .w-item:last-child{
     border: none;
@@ -152,6 +183,9 @@
     background-size: 7%;
     width: 260px;
 }
+.d-icon b{
+    color: #ef0f0f;
+}
 .m-icon{
     background: url("../images/icons/money.png") no-repeat 0 1px ;
     padding:1px 18px;
@@ -161,7 +195,7 @@
     font-size: 20px;font-weight: bold;width:300px;color: #000;
 }
 .w-user div:nth-child(2){
-    background: #b7bdfd;border-radius: 5px;padding: 2px 5px;color: #fff
+    background: #007aff;border-radius: 5px;padding: 2px 5px;color: #fff
 }
 .w-user div:nth-child(3),w-date div:nth-child(3){
     margin-right: 20px;

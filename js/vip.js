@@ -28,7 +28,7 @@ $(function () {
                 type: 'get',
                 url: `http://192.168.0.115:8080/ycweb/product/find_All_product.do`,
                 dataType: 'jsonp',
-                jsonpCallback: "callback",
+                jsonpCallback: "productCallback",
                 success: function (data) {
                     product_list = data
                     for (let i = 0; i < product_list.length; i++) {
@@ -84,9 +84,9 @@ $(function () {
         $.ajax(
             {
                 type: 'get',
-                url: 'http://192.168.0.111:8080/ycweb/order/addOrder.do?ce_order_no='+orderId_time_stamp+'&ce_order_name='+order_name+'&ce_order_buyer='+buyer+'&ce_order_pay_money='+order_money+'&ce_order_pay_time=&ce_order_pay_mode=&ce_order_pay_state=&order_token='+order_token.replace(/\+/g, "+"),
+                url: 'http://192.168.0.115:8080/ycweb/order/addOrder.do?ce_order_no='+orderId_time_stamp+'&ce_order_name='+order_name+'&ce_order_buyer='+buyer+'&ce_order_pay_money='+order_money+'&ce_order_pay_time=&ce_order_pay_mode=&ce_order_pay_state=&order_token='+order_token.replace(/\+/g, "+"),
                 dataType: 'jsonp',
-                jsonpCallback: "callback",
+                jsonpCallback: "payCallback",
                 success: function (data) {
 
                 },

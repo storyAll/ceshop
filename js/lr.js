@@ -286,7 +286,8 @@ $(function () {
                 success: function (data) {
                     if (data[0].value=='false'){
                         $("#msg_register").text("")
-                    } else{
+                    } 
+                    if(data[0].value=='true'){
                         $("#msg_register").text("该手机号已存在请重新输入")
                     }
                     console.log(data[0].value)

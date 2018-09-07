@@ -2,18 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
+        <link rel="shortcut icon" href="./images/icons/ce.ico" type="image/x-icon" />
     <title>威客众包平台</title>
     <!--css-->
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/lib/swiper.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/vip.css">
     <link rel="stylesheet" href="./css/oderWorks.css">
     <link rel="stylesheet" href="./css/orderProcess.css">
+    <link rel="stylesheet" href="./css/rules.css">
     <link rel="stylesheet" href="./css/lib/zcity.css">
+    <link rel="stylesheet" href="./css/reset.css">
 
     <!--js-->
     <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <!-- <script src="https://cdn.bootcss.com/bootstrap/4.1.1/js/bootstrap.min.js"></script> -->
     <script src="./js/lib/swiper.min.js"></script>
     <script src="./js/lib/zcity.js"></script>
     <script src="./js/lib/cookie.js"></script>
@@ -30,7 +36,7 @@
 
 <!--头部区域-->
 <header class="header wrap">
-    <h1 class="logo"><img width="130" src="./images/logo.png" alt="logo"></h1>
+    <h1 class="logo"><img width="145" src="./images/logo.png" alt="logo"><span style="padding-left: 15px;display: inline-block;position: relative;top:-25px"><img width="76%" src="./images/lw.png"></span></h1>
     <div class="search box">
         <ul class="tabs" id="tabs">
             <li class="tabs-active">任务</li>
@@ -46,30 +52,31 @@
 </header>
 
 <!--主菜单区域-->
-<menu class="menu wrap box">
+<menu class=" menu wrap box">
     <ul class="menu-list">
         <li class="main-menu">
             任务类型
         </li>
         <li class="item-menu"><a href="javascript:void 0">接单赚钱 <i style="padding: 0 20px 0 30px">|</i></a></li>
-        <li class="item-menu"><a href="javascript:void 0    ">VIP特权<i style="padding: 0 20px 0 30px">|</i></a></li>
+        <li class="item-menu"><a href="javascript:void 0 ">VIP特权<i style="padding: 0 20px 0 30px">|</i></a></li>
         <li class="item-menu"><a href="javascript:void 0">案例中心<i style="padding: 0 20px 0 30px">|</i></a></li>
         <li class="item-menu"><a href="javascript:void 0">平台活动<i style="padding: 0 20px 0 30px"></i></a></li>
         <li class="item-menu" style="width: 200px"><a class="kf">029-8322-3592</a></li>
     </ul>
-    <div id="uu ">
-        <ul class="child-menu">
+    <div class="containor">
+        <div class="nav_left">
+            <ul>
 
-        </ul>
-        <div class="children-menu hide">
-            <div class="pad-l">
-            </div>
-            <div class="pad-r"></div>
+            </ul>
+        </div>
+        <div class="nav_right">
         </div>
     </div>
+
 </menu>
 
-<div class="landing ">
+<div id="container">
+    <div class=" landing ">
     <!--轮播区域-->
     <div class="swiper-container">
         <div class="swiper-wrapper">
@@ -274,7 +281,7 @@
         <img src="./images/adv2.png" alt="">
     </div>
 </div>
-<div  class="vip hide">
+<div  class=" vip hide">
     <div class="w-content">
         <div class="wrap" style="overflow: hidden">
             <div class="bread">
@@ -453,7 +460,7 @@
         </div>
     </div>
 </div>
-<div class="process hide">
+<div class="process ">
     <div class="w-content" style=";background: #fff">
         <div class="wrap" >
             <div class="bread">
@@ -574,13 +581,15 @@
 
     </div>
 </div>
-<div class="works hide">
+<div class="works ">
     <div class="w-content">
         <div class="wrap">
             <div class="bread">
                 您的位置：首页 > 接单赚钱
             </div>
             <div class="options">
+                <div class="z"></div>
+                <div class="y"></div>
                 <div class="left ld">
                     <div class="op">
                         <span>任务类型：</span>
@@ -594,15 +603,8 @@
                         <span>任务模式：</span>
                         <a href="" class="all">全部</a>
                         <a href="">招标模式</a>|
-                        <a href="">众包模式</a>
-                    </div>
-                    <div class="op">
-                        <span>任务时间：</span>
-                        <a href="" class="all">全部</a>
-                        <a href="">今日发布</a>|
-                        <a href="">近三天发布</a>|
-                        <a href="">近一周发布</a>|
-                        <a href="">近一个月发布</a>
+                        <a href="">众包模式</a>|
+                        <a href="">必中模式</a>
                     </div>
                     <a href="" class="release-work">发布任务</a>
                 </div>
@@ -618,100 +620,68 @@
                     </div>
                 </div>
             </div>
-            <div class="w-items">
-                <div class="w-item">
-                    <div class="w-title" >
-                        招标任务 <span>￥100</span>
-                    </div>
-                    <div class="w-user clearfix">
-                        <div class="left" style="" >王者荣耀+++</div>
-                        <div class="left" style="">游戏账号</div>
-                        <div class="right" style="">11人浏览/0人投标</div>
-                    </div>
-                    <div class="w-date clearfix">
-                        <div class="left d-icon" >投稿截止时间: <b>2018-09-09</b></div>
-                        <div class="left m-icon">赏金分配: <b>一人 独享赏金</b></div>
-                        <div class="right" style="margin-right: 20px">任务编号: <b style="color:#EF0F0F ">20180830001</b></div>
-                    </div>
-                </div>
-                <div class="w-item">
-                    <div class="w-title" >
-                        招标任务 <span>￥100</span>
-                    </div>
-                    <div class="w-user clearfix">
-                        <div class="left" style="" >王者荣耀+++</div>
-                        <div class="left" style="">游戏账号</div>
-                        <div class="right" style="">11人浏览/0人投标</div>
-                    </div>
-                    <div class="w-date clearfix">
-                        <div class="left d-icon" >投稿截止时间: <b>2018-09-09</b></div>
-                        <div class="left m-icon">赏金分配: <b>一人 独享赏金</b></div>
-                        <div class="right" style="margin-right: 20px">任务编号: <b style="color:#EF0F0F ">20180830001</b></div>
-                    </div>
-                </div>
-                <div class="w-item">
-                    <div class="w-title" >
-                        招标任务 <span>￥100</span>
-                    </div>
-                    <div class="w-user clearfix">
-                        <div class="left" style="" >王者荣耀+++</div>
-                        <div class="left" style="">游戏账号</div>
-                        <div class="right" style="">11人浏览/0人投标</div>
-                    </div>
-                    <div class="w-date clearfix">
-                        <div class="left d-icon" >投稿截止时间: <b>2018-09-09</b></div>
-                        <div class="left m-icon">赏金分配: <b>一人 独享赏金</b></div>
-                        <div class="right" style="margin-right: 20px">任务编号: <b style="color:#EF0F0F ">20180830001</b></div>
-                    </div>
-                </div>
-                <div class="w-item">
-                    <div class="w-title" >
-                        招标任务 <span>￥100</span>
-                    </div>
-                    <div class="w-user clearfix">
-                        <div class="left" style="" >王者荣耀+++</div>
-                        <div class="left" style="">游戏账号</div>
-                        <div class="right" style="">11人浏览/0人投标</div>
-                    </div>
-                    <div class="w-date clearfix">
-                        <div class="left d-icon" >投稿截止时间: <b>2018-09-09</b></div>
-                        <div class="left m-icon">赏金分配: <b>一人 独享赏金</b></div>
-                        <div class="right" style="margin-right: 20px">任务编号: <b style="color:#EF0F0F ">20180830001</b></div>
-                    </div>
-                </div>
-                <div class="w-item">
-                    <div class="w-title" >
-                        招标任务 <span>￥100</span>
-                    </div>
-                    <div class="w-user clearfix">
-                        <div class="left" style="" >王者荣耀+++</div>
-                        <div class="left" style="">游戏账号</div>
-                        <div class="right" style="">11人浏览/0人投标</div>
-                    </div>
-                    <div class="w-date clearfix">
-                        <div class="left d-icon" >投稿截止时间: <b>2018-09-09</b></div>
-                        <div class="left m-icon">赏金分配: <b>一人 独享赏金</b></div>
-                        <div class="right" style="margin-right: 20px">任务编号: <b style="color:#EF0F0F ">20180830001</b></div>
-                    </div>
-                </div>
-                <div class="w-item">
-                    <div class="w-title" >
-                        招标任务 <span>￥100</span>
-                    </div>
-                    <div class="w-user clearfix">
-                        <div class="left" style="" >王者荣耀+++</div>
-                        <div class="left" style="">游戏账号</div>
-                        <div class="right" style="">11人浏览/0人投标</div>
-                    </div>
-                    <div class="w-date clearfix">
-                        <div class="left d-icon" >投稿截止时间: <b>2018-09-09</b></div>
-                        <div class="left m-icon">赏金分配: <b>一人 独享赏金</b></div>
-                        <div class="right" style="margin-right: 20px">任务编号: <b style="color:#EF0F0F ">20180830001</b></div>
-                    </div>
-                </div>
+            <div class="w-items" id="workList">
+                <!-- 任务列表 -->
+
             </div>
         </div>
     </div>
+</div>
+<div class="myself-center hide">
+    <div class="w-content">
+        <div class="wrap">
+            <div class="bread">
+                您的位置：首页 > 接单赚钱
+            </div>
+        </div>
+    </div>
+</div>
+<div class="rules-center " id="rulesCenter">
+    <div class="w-content"style="background-color: #fff">
+        <div class="wrap" >
+            <div class="bread">
+                您的位置：首页 > 规则中心
+            </div>
+            <ul class="rule-tabs">
+                <li>CE规则中心</li>
+                <li>网服规则</li>
+                <li>用户账号规定</li>
+                <li>知识产权声明</li>
+                <li>侵权行为管理制度</li>
+                <li>服务商管理规范</li>
+                <li>服务承诺与保障</li>
+                <li>举报和争议纠纷处理</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="news-center hide">
+    <div class="w-content">
+        <div class="wrap">
+            <div class="bread">
+                您的位置：首页 > 接单赚钱
+            </div>
+        </div>
+    </div>
+</div>
+<div class="myself-center hide">
+    <div class="w-content">
+        <div class="wrap">
+            <div class="bread">
+                您的位置：首页 > 接单赚钱
+            </div>
+        </div>
+    </div>
+</div>
+<div class="myself-center hide">
+    <div class="w-content">
+        <div class="wrap">
+            <div class="bread">
+                您的位置：首页 > 接单赚钱
+            </div>
+        </div>
+    </div>
+</div>
 </div>
 
 <!--底部信息区-->
@@ -723,9 +693,19 @@
     </div>
 </footer>
 
-
 <!--自定义交互区-->
-
+<script>
+    $('.containor').on('mouseenter', function() {
+        $(".nav_right").removeClass('hide');
+    }).on('mouseleave', function() {
+        $(".nav_right").addClass('hide');
+        $(".sub").addClass('hide');
+    }).on('mouseenter', 'li', function(e) {
+        var li_data = $(this).attr('data-id');
+        $(".sub").addClass('hide');
+        $('.sub[data-id="' + li_data + '"]').removeClass('hide');
+    })
+</script>
 <script src="./js/main.js"></script>
 <script src="./js/vip.js"></script>
 <script type="text/javascript">

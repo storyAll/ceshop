@@ -1,0 +1,11 @@
+#rulesCenter .rule-tabs{
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    font-size: 18px;
+}
+#rulesCenter .rule-tabs li{
+    line-height: 50px;
+    width:12%;
+    float: left;
+}
